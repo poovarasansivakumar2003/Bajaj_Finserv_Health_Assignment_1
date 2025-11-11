@@ -48,77 +48,75 @@ Bajaj_Finserv_Health_Assignment_1/
 - **Maven** (Maven Wrapper included in project)
 - Internet connection for API calls
 
-🎯 Step-by-Step Execution Guide
+## 🎯 Step-by-Step Execution Guide
 
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/poovarasansivakumar2003/Bajaj_Finserv_Health_Assignment_1.git
+   cd Bajaj_Finserv_Health_Assignment_1
+   ```
 
+2. **Update Configuration**
+   Open `application.properties`
+   Replace `user.name`, `user.regNo`, and `user.email` with your actual details
 
-## 🔽 Clone the Repository
+    ```properties
+    user.name=your_name
+    user.regNo=your_reg_no
+    user.email=your_email@example.com
+    ```
 
-Clone the project and change into the project directory:
+3. **How to Run the Application**
 
-```bash
-git clone https://github.com/poovarasansivakumar2003/Bajaj_Finserv_Health_Assignment_1.git
-cd Bajaj_Finserv_Health_Assignment_1
-```
+    **Option 1**: Using Maven Wrapper (Recommended - No Maven installation required)
 
-Step 1: Update Configuration
-Open application.properties
-Replace user.name, user.regNo, and user.email with your actual details
+    **On Windows**:
+    ```bash
+    # Run the application
+    .\mvnw.cmd spring-boot:run
+    ```
 
-user.name=your_name
-user.regNo=your_reg_no
-user.email=your_email@example.com
+    **On macOS/Linux**:
+    ```bash
+    # Run the application
+    ./mvnw spring-boot:run
 
+    # Make the wrapper executable
+    chmod +x mvnw
 
-## 🚀 How to Run
+    # Run the application
+    ./mvnw spring-boot:run
+    ```
 
-### Option 1: Using Maven Wrapper (Recommended - No Maven installation required)
+    **Option 2**: Build and Run JAR
 
-#### On Windows:
+    **On Windows**:
+    ```bash
+    # Build the JAR
+    .\mvnw.cmd clean package
 
-```bash
+    # Run the JAR
+    java -jar target\bajaj-finserv-health-assignment.jar
+    ```
+    **On macOS/Linux**:
+    ```bash
+    # Build the JAR
+    ./mvnw clean package
 
-# Run the application
-.\mvnw.cmd spring-boot:run
-```
+    # Run the JAR
+    java -jar target/bajaj-finserv-health-assignment.jar
+    ```
 
-#### On macOS/Linux:
+## Check Output
 
-```bash
-# Make the wrapper executable
-chmod +x mvnw
-
-# Run the application
-./mvnw spring-boot:run
-```
-
-### Option 2: Build and Run JAR
-On Windows:
-```bash
-# Build the JAR
-.\mvnw.cmd clean package
-
-# Run the JAR
-java -jar target\bajaj-finserv-health-assignment.jar
-```
-On macOS/Linux:
-```bash
-# Build the JAR
-./mvnw clean package
-
-# Run the JAR
-java -jar target/bajaj-finserv-health-assignment.jar
-```
-
-### Check Output
-The application will automatically:
+#### The application will automatically:
 
 ✅ Generate webhook
 ✅ Determine your SQL question (based on reg number)
 ✅ Submit the solution
 ✅ Display all steps in console
 
-Output Example
+### Output Example
 
 ```
 
@@ -194,7 +192,7 @@ Generated SQL Query:
 Terminate batch job (Y/N)? y
 ```
 
-📝 SQL Queries Explained
+## 📝 SQL Queries Explained
 Question 1 (ODD Registration Numbers):
 Find the highest salary not paid on the 1st day of any month with employee details.
 
@@ -205,9 +203,7 @@ Count younger employees in the same department for each employee.
 
 Output Columns: EMP_ID, FIRST_NAME, LAST_NAME, DEPARTMENT_NAME, YOUNGER_EMPLOYEES_COUNT
 
-
-
-🔍 Troubleshooting
+## 🔍 Troubleshooting
 
 ### Issue: "mvnw is not recognized"
 Solution: Use mvnw.cmd on Windows or mvnw on Linux/Mac
@@ -221,10 +217,22 @@ Solution: Use mvnw.cmd on Windows or mvnw on Linux/Mac
 ### Issue: "Port 8080 already in use"
 **Solution**: Add to application.properties: server.port=8081
 
-👨‍💻 Author
+## 👨‍💻 Author
+Poovarasan S
+GitHub: @poovarasansivakumar2003
 
-
-📄 License
+## 📄 License
 This project is created for Bajaj Finserv Health Qualifier 1 Assignment.
 
-Note: Make sure to update application.properties with your actual details before running the application!
+## 🙏 Acknowledgments
+Bajaj Finserv Health for the assignment opportunity
+Spring Boot community for excellent documentation
+
+## 📞 Support
+If you encounter any issues:
+Check the Troubleshooting section
+Ensure all prerequisites are installed
+Verify your application.properties configuration
+Check console logs for specific error messages
+
+## ⚠️ Important Note: Make sure to update application.properties with your actual details before running the application!
